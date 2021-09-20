@@ -1,13 +1,26 @@
-void setup()
-{
+void setup(){
   size(300,300);
+  background(0,0,0);
 }
-void draw()
-{
 
+int startX = 0;
+int startY = 150;
+int endX;
+int endY;
+void draw(){
+  strokeWeight(2);
+  stroke((int)(Math.random()*256),(int)(Math.random()*256),(int)(Math.random()*256));
+   while(startX <= 300){
+    endX = startX + (int)(Math.random()*15);
+    endY = startY + (int)(Math.random()*30) - 15;
+    line(startX, startY, endX, endY);
+    startX = endX;     startY = endY; 
+     System.out.println(startX + " , " + startY);
+   }
 }
-void mousePressed()
-{
 
+void mousePressed(){
+ startX = 0;
+ startY = 150;
 }
 
