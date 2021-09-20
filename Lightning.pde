@@ -15,7 +15,6 @@ void draw(){
     endY = startY + (int)(Math.random()*30) - 15;
     line(startX, startY, endX, endY);
     startX = endX;     startY = endY; 
-     System.out.println(startX + " , " + startY);
    }
 }
 
